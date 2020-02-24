@@ -104,9 +104,98 @@
 </ul>
 <h2 id="Unity-Shader-基础"><a href="#Unity-Shader-基础" class="headerlink" title="Unity Shader 基础"></a>Unity Shader 基础</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Shader &quot;ShaderName&quot;&#123;</span><br><span class="line">    Properties&#123;</span><br><span class="line">        &#x2F;&#x2F;属性</span><br><span class="line">    &#125;</span><br><span class="line">    SubShader&#123;</span><br><span class="line">        &#x2F;&#x2F;显卡A使用的子着色器</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;可选</span><br><span class="line">        &quot;Tags&quot;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;可选</span><br><span class="line">        &quot;RenderSetup&quot;</span><br><span class="line"></span><br><span class="line">        Pass&#123;</span><br><span class="line">            &#x2F;&#x2F;定义一个完整流程</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    SubShader&#123;</span><br><span class="line">        &#x2F;&#x2F;显卡B使用的子着色器</span><br><span class="line">    &#125;</span><br><span class="line">    Fallback &quot;VertexLit&quot;</span><br><span class="line">    &#x2F;&#x2F;留后路</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="常见的渲染状态设置选项"><a href="#常见的渲染状态设置选项" class="headerlink" title="常见的渲染状态设置选项"></a><center>常见的渲染状态设置选项</center></h3><p>状态名称|设置指令|解释<br>|—– | —–|——<br>Cull|Cull Back/Front/ Off|设置剔除模式：提出背面/正面/关闭<br>ZTest|ZTest Less Greater/ LEqual/GEqual/Equal/NotEqual/Always|设置深度检测时使用的函数<br>ZWrite|Zwrite On/ Off|开启/关闭深度<br>Blend|Blend SrcFactor DstFactor|开启并设置混合模式</p>
-<h3 id="SubShader的标签类型"><a href="#SubShader的标签类型" class="headerlink" title="SubShader的标签类型"></a><center>SubShader的标签类型</center></h3><p>标签类型|说明|例子<br>|–|–|–<br>Queue|控制渲染顺序，让透明物体在不透明物体之后渲染|Tags {“Queue”=”Transparent”}<br>RenderType|对着色器分类，用于着色器替代|Tags {“RenderType”=”Opaque”}<br>DisableBatching|一些SubShader在Unity的批处理时会出现错误，例如使用了模型空间下的坐标进行定点动画。这是可以通过该标签来直接指明使得否对该SubShader使用批处理|Tags {“DisableBatching”=”True”}<br>ForceNoShadowCasting|控制使用SubShader的物体是否会投射阴影|Tags {“ForceNoShadowCasting”=”True”}<br>IgnoreProjector|如果该标签值为True，那么使用该SubShader的物体将不会受Projector的影响，通常用半透明物体|Tags {“IgnoreProjector”=”True”}<br>CanUseSpriteAtlas|当该SubShader使用于精灵(sprites)时，该标签设置为False|Tags {“CanUseSpriteAtlas”=”False”}<br>PreviewType|知名材质面板将如何预览该材质。默认情况下，材质将显示一个球，我们可以通过把该标签的值设置为”Plane””SkyBox”来改变预览类型|Tags {“PreviewType”=”Plane”}</p>
-<h3 id="Pass的标签类型"><a href="#Pass的标签类型" class="headerlink" title="Pass的标签类型"></a><center>Pass的标签类型</center></h3><p>标签类型|说明|例子<br>|–|–|–<br>LightMode|定义该Pass在Unity的渲染流水线中的角色|Tags {“LightMode”=”ForwardBase”}<br>RequireOptions|用于指定当满足某些条件时才渲染该Pass，他的只是一个有空格分隔的字符串。目前，Unity支持的选项有SoftVegetation。|Tags {“RequireOptions”=”SoftVegetation”}</p>
+<h3 id="常见的渲染状态设置选项"><a href="#常见的渲染状态设置选项" class="headerlink" title="常见的渲染状态设置选项"></a><center>常见的渲染状态设置选项</center></h3><table>
+<thead>
+<tr>
+<th>状态名称</th>
+<th>设置指令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cull</td>
+<td>Cull Back/Front/ Off</td>
+<td>设置剔除模式：提出背面/正面/关闭</td>
+</tr>
+<tr>
+<td>ZTest</td>
+<td>ZTest Less Greater/ LEqual/GEqual/Equal/NotEqual/Always</td>
+<td>设置深度检测时使用的函数</td>
+</tr>
+<tr>
+<td>ZWrite</td>
+<td>Zwrite On/ Off</td>
+<td>开启/关闭深度</td>
+</tr>
+<tr>
+<td>Blend</td>
+<td>Blend SrcFactor DstFactor</td>
+<td>开启并设置混合模式</td>
+</tr>
+</tbody></table>
+<h3 id="SubShader的标签类型"><a href="#SubShader的标签类型" class="headerlink" title="SubShader的标签类型"></a><center>SubShader的标签类型</center></h3><table>
+<thead>
+<tr>
+<th>标签类型</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Queue</td>
+<td>控制渲染顺序，让透明物体在不透明物体之后渲染</td>
+<td>Tags {“Queue”=”Transparent”}</td>
+</tr>
+<tr>
+<td>RenderType</td>
+<td>对着色器分类，用于着色器替代</td>
+<td>Tags {“RenderType”=”Opaque”}</td>
+</tr>
+<tr>
+<td>DisableBatching</td>
+<td>一些SubShader在Unity的批处理时会出现错误，例如使用了模型空间下的坐标进行定点动画。这是可以通过该标签来直接指明使得否对该SubShader使用批处理</td>
+<td>Tags {“DisableBatching”=”True”}</td>
+</tr>
+<tr>
+<td>ForceNoShadowCasting</td>
+<td>控制使用SubShader的物体是否会投射阴影</td>
+<td>Tags {“ForceNoShadowCasting”=”True”}</td>
+</tr>
+<tr>
+<td>IgnoreProjector</td>
+<td>如果该标签值为True，那么使用该SubShader的物体将不会受Projector的影响，通常用半透明物体</td>
+<td>Tags {“IgnoreProjector”=”True”}</td>
+</tr>
+<tr>
+<td>CanUseSpriteAtlas</td>
+<td>当该SubShader使用于精灵(sprites)时，该标签设置为False</td>
+<td>Tags {“CanUseSpriteAtlas”=”False”}</td>
+</tr>
+<tr>
+<td>PreviewType</td>
+<td>知名材质面板将如何预览该材质。默认情况下，材质将显示一个球，我们可以通过把该标签的值设置为”Plane””SkyBox”来改变预览类型</td>
+<td>Tags {“PreviewType”=”Plane”}</td>
+</tr>
+</tbody></table>
+<h3 id="Pass的标签类型"><a href="#Pass的标签类型" class="headerlink" title="Pass的标签类型"></a><center>Pass的标签类型</center></h3><table>
+<thead>
+<tr>
+<th>标签类型</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LightMode</td>
+<td>定义该Pass在Unity的渲染流水线中的角色</td>
+<td>Tags {“LightMode”=”ForwardBase”}</td>
+</tr>
+<tr>
+<td>RequireOptions</td>
+<td>用于指定当满足某些条件时才渲染该Pass，他的只是一个有空格分隔的字符串。目前，Unity支持的选项有SoftVegetation。</td>
+<td>Tags {“RequireOptions”=”SoftVegetation”}</td>
+</tr>
+</tbody></table>
 <h1 id="基础光照"><a href="#基础光照" class="headerlink" title="基础光照"></a>基础光照</h1><h2 id="光源"><a href="#光源" class="headerlink" title="光源"></a>光源</h2><p>在光学里，我们使用辐射度来量化光。<br>根据入社的光线数量和方向，无门可以计算出光线的数量和方向，我们称之为出射度。<br>辐射度和出射度的比值满足线性关系，其值为材质的漫反射和高光反射的属性。</p>
 <h2 id="吸收和散射"><a href="#吸收和散射" class="headerlink" title="吸收和散射"></a>吸收和散射</h2><p>光线由光源发射出来后，就会与一些物体相交。通常，相交的结果有两个：散射和吸收。</p>
 <p>散射只改变光线的方向，但不改变光线的密度和颜色。<br>光线散射后有两种方向：一种会散射带物体内部，成为折射或透射；一种会散射到物体外部，这种现象称为反射。<br>为了计算两种不同的散射方向，高光反射表示物体表面是如何反射光线的，漫反射表示有多少光线会被折射、吸收和散射出表面。</p>
@@ -121,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/hello-world/" data-id="ck701see70000csujcvaoghpq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/hello-world/" data-id="ck7020gg10000e0ujeyvih8oo" class="article-share-link">Share</a>
       
       
     </footer>
