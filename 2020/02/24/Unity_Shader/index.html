@@ -5,12 +5,12 @@
   
 
   
-  <title>hello-world | Hexo</title>
+  <title>Unity_Shader | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Unity-Shader程序员的三大浪漫是编译原理、操作系统、图形学计算机图形学第一定律：如果它看起来是对的，那么他就是对的。 渲染流水线渲染流程的三个阶段：应用阶段、几何阶段、光栅化阶段应用阶段：开发者主导的阶段，输出渲染所需的结合信息即渲染图元。几何阶段：与渲染图元打交道，重要任务是输出屏幕空间的二位顶点坐标、每个顶点对应的深度值、着色等相关信息。光栅化阶段：决定每个渲染图元中的那些像素应该绘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello-world">
-<meta property="og:url" content="http://yoursite.com/2020/02/24/hello-world/index.html">
+<meta property="og:title" content="Unity_Shader">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/Unity_Shader/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Unity-Shader程序员的三大浪漫是编译原理、操作系统、图形学计算机图形学第一定律：如果它看起来是对的，那么他就是对的。 渲染流水线渲染流程的三个阶段：应用阶段、几何阶段、光栅化阶段应用阶段：开发者主导的阶段，输出渲染所需的结合信息即渲染图元。几何阶段：与渲染图元打交道，重要任务是输出屏幕空间的二位顶点坐标、每个顶点对应的深度值、着色等相关信息。光栅化阶段：决定每个渲染图元中的那些像素应该绘">
 <meta property="og:locale" content="en_US">
@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://q59qahcgi.bkt.clouddn.com/60C1A7D7BF90EA9AAE8857A085A0C1B7.png">
 <meta property="og:image" content="http://q59qahcgi.bkt.clouddn.com/D03E4FB4603EFD64B3F382A902742408.png">
 <meta property="article:published_time" content="2020-02-24T03:09:08.554Z">
-<meta property="article:modified_time" content="2020-02-24T06:06:09.624Z">
+<meta property="article:modified_time" content="2020-02-24T06:13:39.026Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://q59qahcgi.bkt.clouddn.com/IMG_0061%2820200222-124110%29.PNG">
@@ -70,9 +70,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Unity_Shader" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/02/24/hello-world/" class="article-date">
+    <a href="/2020/02/24/Unity_Shader/" class="article-date">
   <time datetime="2020-02-24T03:09:08.554Z" itemprop="datePublished">2020-02-24</time>
 </a>
     
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hello-world
+      Unity_Shader
     </h1>
   
 
@@ -114,28 +114,28 @@
 <thead>
 <tr>
 <th align="left">状态名称</th>
-<th align="left">设置指令</th>
+<th align="center">设置指令</th>
 <th align="left">解释</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left">Cull</td>
-<td align="left">Cull Back/Front/ Off</td>
+<td align="center">Cull Back/Front/ Off</td>
 <td align="left">设置剔除模式：提出背面/正面/关闭</td>
 </tr>
 <tr>
 <td align="left">ZTest</td>
-<td align="left">ZTest Less Greater/ LEqual/GEqual/Equal/NotEqual/Always</td>
+<td align="center">ZTest Less Greater/ LEqual/GEqual/Equal/NotEqual/Always</td>
 <td align="left">设置深度检测时使用的函数</td>
 </tr>
 <tr>
 <td align="left">ZWrite</td>
-<td align="left">Zwrite On/ Off</td>
+<td align="center">Zwrite On/ Off</td>
 <td align="left">开启/关闭深度</td>
 </tr>
 <tr>
 <td align="left">Blend</td>
-<td align="left">Blend SrcFactor DstFactor</td>
+<td align="center">Blend SrcFactor DstFactor</td>
 <td align="left">开启并设置混合模式</td>
 </tr>
 </tbody></table>
@@ -143,43 +143,43 @@
 <thead>
 <tr>
 <th align="left">标签类型</th>
-<th align="left">说明</th>
+<th align="center">说明</th>
 <th align="left">例子</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left">Queue</td>
-<td align="left">控制渲染顺序，让透明物体在不透明物体之后渲染</td>
+<td align="center">控制渲染顺序，让透明物体在不透明物体之后渲染</td>
 <td align="left">Tags {“Queue”=”Transparent”}</td>
 </tr>
 <tr>
 <td align="left">RenderType</td>
-<td align="left">对着色器分类，用于着色器替代</td>
+<td align="center">对着色器分类，用于着色器替代</td>
 <td align="left">Tags {“RenderType”=”Opaque”}</td>
 </tr>
 <tr>
 <td align="left">DisableBatching</td>
-<td align="left">一些SubShader在Unity的批处理时会出现错误，例如使用了模型空间下的坐标进行定点动画。这是可以通过该标签来直接指明使得否对该SubShader使用批处理</td>
+<td align="center">一些SubShader在Unity的批处理时会出现错误，例如使用了模型空间下的坐标进行定点动画。这是可以通过该标签来直接指明使得否对该SubShader使用批处理</td>
 <td align="left">Tags {“DisableBatching”=”True”}</td>
 </tr>
 <tr>
 <td align="left">ForceNoShadowCasting</td>
-<td align="left">控制使用SubShader的物体是否会投射阴影</td>
+<td align="center">控制使用SubShader的物体是否会投射阴影</td>
 <td align="left">Tags {“ForceNoShadowCasting”=”True”}</td>
 </tr>
 <tr>
 <td align="left">IgnoreProjector</td>
-<td align="left">如果该标签值为True，那么使用该SubShader的物体将不会受Projector的影响，通常用半透明物体</td>
+<td align="center">如果该标签值为True，那么使用该SubShader的物体将不会受Projector的影响，通常用半透明物体</td>
 <td align="left">Tags {“IgnoreProjector”=”True”}</td>
 </tr>
 <tr>
 <td align="left">CanUseSpriteAtlas</td>
-<td align="left">当该SubShader使用于精灵(sprites)时，该标签设置为False</td>
+<td align="center">当该SubShader使用于精灵(sprites)时，该标签设置为False</td>
 <td align="left">Tags {“CanUseSpriteAtlas”=”False”}</td>
 </tr>
 <tr>
 <td align="left">PreviewType</td>
-<td align="left">知名材质面板将如何预览该材质。默认情况下，材质将显示一个球，我们可以通过把该标签的值设置为”Plane””SkyBox”来改变预览类型</td>
+<td align="center">知名材质面板将如何预览该材质。默认情况下，材质将显示一个球，我们可以通过把该标签的值设置为”Plane””SkyBox”来改变预览类型</td>
 <td align="left">Tags {“PreviewType”=”Plane”}</td>
 </tr>
 </tbody></table>
@@ -187,18 +187,18 @@
 <thead>
 <tr>
 <th align="left">标签类型</th>
-<th align="left">说明</th>
+<th align="center">说明</th>
 <th align="left">例子</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left">LightMode</td>
-<td align="left">定义该Pass在Unity的渲染流水线中的角色</td>
+<td align="center">定义该Pass在Unity的渲染流水线中的角色</td>
 <td align="left">Tags {“LightMode”=”ForwardBase”}</td>
 </tr>
 <tr>
 <td align="left">RequireOptions</td>
-<td align="left">用于指定当满足某些条件时才渲染该Pass，他的只是一个有空格分隔的字符串。目前，Unity支持的选项有SoftVegetation。</td>
+<td align="center">用于指定当满足某些条件时才渲染该Pass，他的只是一个有空格分隔的字符串。目前，Unity支持的选项有SoftVegetation。</td>
 <td align="left">Tags {“RequireOptions”=”SoftVegetation”}</td>
 </tr>
 </tbody></table>
@@ -216,7 +216,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/hello-world/" data-id="ck70268ke000000uj3bfk09bf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/Unity_Shader/" data-id="ck702gjkw0000c0ujdjyq69o9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -255,7 +255,7 @@
       <ul>
         
           <li>
-            <a href="/2020/02/24/hello-world/">hello-world</a>
+            <a href="/2020/02/24/Unity_Shader/">Unity_Shader</a>
           </li>
         
       </ul>

@@ -64,9 +64,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Unity_Shader" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/02/24/hello-world/" class="article-date">
+    <a href="/2020/02/24/Unity_Shader/" class="article-date">
   <time datetime="2020-02-24T03:09:08.554Z" itemprop="datePublished">2020-02-24</time>
 </a>
     
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/24/hello-world/">hello-world</a>
+      <a class="article-title" href="/2020/02/24/Unity_Shader/">Unity_Shader</a>
     </h1>
   
 
@@ -108,28 +108,28 @@
 <thead>
 <tr>
 <th align="left">状态名称</th>
-<th align="left">设置指令</th>
+<th align="center">设置指令</th>
 <th align="left">解释</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left">Cull</td>
-<td align="left">Cull Back/Front/ Off</td>
+<td align="center">Cull Back/Front/ Off</td>
 <td align="left">设置剔除模式：提出背面/正面/关闭</td>
 </tr>
 <tr>
 <td align="left">ZTest</td>
-<td align="left">ZTest Less Greater/ LEqual/GEqual/Equal/NotEqual/Always</td>
+<td align="center">ZTest Less Greater/ LEqual/GEqual/Equal/NotEqual/Always</td>
 <td align="left">设置深度检测时使用的函数</td>
 </tr>
 <tr>
 <td align="left">ZWrite</td>
-<td align="left">Zwrite On/ Off</td>
+<td align="center">Zwrite On/ Off</td>
 <td align="left">开启/关闭深度</td>
 </tr>
 <tr>
 <td align="left">Blend</td>
-<td align="left">Blend SrcFactor DstFactor</td>
+<td align="center">Blend SrcFactor DstFactor</td>
 <td align="left">开启并设置混合模式</td>
 </tr>
 </tbody></table>
@@ -137,43 +137,43 @@
 <thead>
 <tr>
 <th align="left">标签类型</th>
-<th align="left">说明</th>
+<th align="center">说明</th>
 <th align="left">例子</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left">Queue</td>
-<td align="left">控制渲染顺序，让透明物体在不透明物体之后渲染</td>
+<td align="center">控制渲染顺序，让透明物体在不透明物体之后渲染</td>
 <td align="left">Tags {“Queue”=”Transparent”}</td>
 </tr>
 <tr>
 <td align="left">RenderType</td>
-<td align="left">对着色器分类，用于着色器替代</td>
+<td align="center">对着色器分类，用于着色器替代</td>
 <td align="left">Tags {“RenderType”=”Opaque”}</td>
 </tr>
 <tr>
 <td align="left">DisableBatching</td>
-<td align="left">一些SubShader在Unity的批处理时会出现错误，例如使用了模型空间下的坐标进行定点动画。这是可以通过该标签来直接指明使得否对该SubShader使用批处理</td>
+<td align="center">一些SubShader在Unity的批处理时会出现错误，例如使用了模型空间下的坐标进行定点动画。这是可以通过该标签来直接指明使得否对该SubShader使用批处理</td>
 <td align="left">Tags {“DisableBatching”=”True”}</td>
 </tr>
 <tr>
 <td align="left">ForceNoShadowCasting</td>
-<td align="left">控制使用SubShader的物体是否会投射阴影</td>
+<td align="center">控制使用SubShader的物体是否会投射阴影</td>
 <td align="left">Tags {“ForceNoShadowCasting”=”True”}</td>
 </tr>
 <tr>
 <td align="left">IgnoreProjector</td>
-<td align="left">如果该标签值为True，那么使用该SubShader的物体将不会受Projector的影响，通常用半透明物体</td>
+<td align="center">如果该标签值为True，那么使用该SubShader的物体将不会受Projector的影响，通常用半透明物体</td>
 <td align="left">Tags {“IgnoreProjector”=”True”}</td>
 </tr>
 <tr>
 <td align="left">CanUseSpriteAtlas</td>
-<td align="left">当该SubShader使用于精灵(sprites)时，该标签设置为False</td>
+<td align="center">当该SubShader使用于精灵(sprites)时，该标签设置为False</td>
 <td align="left">Tags {“CanUseSpriteAtlas”=”False”}</td>
 </tr>
 <tr>
 <td align="left">PreviewType</td>
-<td align="left">知名材质面板将如何预览该材质。默认情况下，材质将显示一个球，我们可以通过把该标签的值设置为”Plane””SkyBox”来改变预览类型</td>
+<td align="center">知名材质面板将如何预览该材质。默认情况下，材质将显示一个球，我们可以通过把该标签的值设置为”Plane””SkyBox”来改变预览类型</td>
 <td align="left">Tags {“PreviewType”=”Plane”}</td>
 </tr>
 </tbody></table>
@@ -181,18 +181,18 @@
 <thead>
 <tr>
 <th align="left">标签类型</th>
-<th align="left">说明</th>
+<th align="center">说明</th>
 <th align="left">例子</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left">LightMode</td>
-<td align="left">定义该Pass在Unity的渲染流水线中的角色</td>
+<td align="center">定义该Pass在Unity的渲染流水线中的角色</td>
 <td align="left">Tags {“LightMode”=”ForwardBase”}</td>
 </tr>
 <tr>
 <td align="left">RequireOptions</td>
-<td align="left">用于指定当满足某些条件时才渲染该Pass，他的只是一个有空格分隔的字符串。目前，Unity支持的选项有SoftVegetation。</td>
+<td align="center">用于指定当满足某些条件时才渲染该Pass，他的只是一个有空格分隔的字符串。目前，Unity支持的选项有SoftVegetation。</td>
 <td align="left">Tags {“RequireOptions”=”SoftVegetation”}</td>
 </tr>
 </tbody></table>
@@ -210,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/hello-world/" data-id="ck70268ke000000uj3bfk09bf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/Unity_Shader/" data-id="ck702gjkw0000c0ujdjyq69o9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -251,7 +251,7 @@
       <ul>
         
           <li>
-            <a href="/2020/02/24/hello-world/">hello-world</a>
+            <a href="/2020/02/24/Unity_Shader/">Unity_Shader</a>
           </li>
         
       </ul>
