@@ -1949,7 +1949,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #41ff2d;
+  background: #5354ee;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3023,6 +3023,19 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+body::before {
+  background-image: url("http://q59qahcgi.bkt.clouddn.com/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  content: " ";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 ::-webkit-scrollbar {
   width: 10px;
