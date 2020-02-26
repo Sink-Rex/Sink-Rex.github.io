@@ -1949,7 +1949,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5354ee;
+  background: #ffabff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3025,7 +3025,7 @@ hr {
   }
 }
 body::before {
-  background-image: url("http://q59qahcgi.bkt.clouddn.com/bg.jpg");
+  background-image: url("http://q59qahcgi.bkt.clouddn.com/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -3079,4 +3079,7 @@ body::before {
   color: #07b39b;
   font-size: 13px;
   margin-top: 15px;
+}
+img.img-topic {
+  width: 100%;
 }

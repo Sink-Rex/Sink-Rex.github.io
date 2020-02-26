@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello_World</title>
+    <url>/2020/02/26/hello-world/</url>
+    <content><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello_World"></a>Hello_World</h1><h2 id="Github-常用命令练习"><a href="#Github-常用命令练习" class="headerlink" title="Github 常用命令练习"></a>Github 常用命令练习</h2><p>Let’s make a big difference.</p>
+<p>-feature-A</p>
+<p>-feature-B</p>
+<hr>
+<h2 id="Markdown-练习"><a href="#Markdown-练习" class="headerlink" title="Markdown 练习"></a>Markdown 练习</h2><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><p><em>这会是 斜体 的文字</em><br>_这会是 斜体 的文字_</p>
+<p><strong>这会是 粗体 的文字</strong><br><strong>这会是 粗体 的文字</strong></p>
+<p>_你也 <strong>组合</strong> 这些符号_</p>
+<p><del>这个文字将会被横线删除</del></p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>Item 1</li>
+<li>Item 2<ul>
+<li>Item 2a</li>
+<li>Item 2b</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3<ol>
+<li>Item 3a</li>
+<li>Item 3b  </li>
+</ol>
+</li>
+</ol>
+<h2 id="引用框"><a href="#引用框" class="headerlink" title="引用框"></a>引用框</h2><p>正如 Kanye West 所说：</p>
+<blockquote>
+<p>We’re living the future so<br>the present is our past.</p>
+</blockquote>
+<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">'redcarpet'</span></span><br><span class="line">markdown = Redcarpet.new(<span class="string">"Hello World!"</span>)</span><br><span class="line">puts markdown.to_html</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content from cell 1</td>
+<td>Content from cell 2</td>
+</tr>
+<tr>
+<td>Content in the first column</td>
+<td>Content in the second column</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><p>30<sup>th</sup><br>H<sub>2</sub>O</p>
+<h2 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h2><p>:smile::blush:<br><a href="http://www.emoji-cheat-sheet.com" target="_blank" rel="noopener">Emoji</a>支持页面</p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>引用方法</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使用七牛云作为图床</td>
+<td><img src="http://q59qahcgi.bkt.clouddn.com/logo.jpg?e=1580976835&amp;token=HD5V3YuzhZC8rfF6gg7jukkSUibZ2WIcaruYBL2t:5VAS1BWDEdsVT3CSMReRaZzBFbA=" alt="text"></td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+  </entry>
+  <entry>
     <title>Unity_Shader</title>
     <url>/2020/02/24/Unity_Shader/</url>
     <content><![CDATA[<h1 id="Unity-Shader"><a href="#Unity-Shader" class="headerlink" title="Unity-Shader"></a>Unity-Shader</h1><p>程序员的三大浪漫是编译原理、操作系统、图形学<br>计算机图形学第一定律：如果它看起来是对的，那么他就是对的。</p>
