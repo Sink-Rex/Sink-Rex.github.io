@@ -1,4 +1,4 @@
-import Chart from "../../chart.js";
+import Chart from "../../../chart.js";
 
 d3.csv('./data.csv', function(d){
     return {
